@@ -2,3 +2,4 @@ myenv
 NuExtract-v1.5
 __pycache__
 .DS_Store
+.idea/*
