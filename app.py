@@ -19,13 +19,13 @@ class ModelNotLoadedError(Exception):
 def load_model_and_tokenizer():
     global model, tokenizer
     if model is None or tokenizer is None:
-        print(f"\n\nLoading model numind/NuExtract-v1.5 first time ... \n\n")
+        print(f"\n\nLoading model numind/NuExtract-v1.5 first time from {NUEXTRACT_1_5_MODEL_PATH} \n\n")
         model_path =  NUEXTRACT_1_5_MODEL_PATH # Check the .env file to ensure the path points to nuextract-v1.5 model foler
         device = "cuda" if torch.cuda.is_available() else "cpu"
         try:
             model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, trust_remote_code=True).to(device).eval()
             tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-            print(f"\n\nModel numind/NuExtract-v1.5 loaded successfully ! \n\n")
+            print(f"\n\nModel numind/NuExtract-v1.5 loaded from {NUEXTRACT_1_5_MODEL_PATH} successfully ! \n\n")
         except Exception as e:
             print(f"Error loading model numind/NuExtract-v1.5 or tokenizer: {e}")
             return (e)
@@ -64,7 +64,8 @@ def predict_NuExtract(texts, template):
 
 @app.route('/api/predict_NuExtract', methods=['POST'])
 def api_Predict_NuExtract():
-    data = request.get_json()  
+    data = request.get_json()
+    print(f"\n\n=== Received data : === \n\n {data}\n\n")  
     required_parameters = ['text', 'template']     
     missing_fields = [field.replace('_', ' ').title() for field in required_parameters if not data.get(field)]    
     if missing_fields:

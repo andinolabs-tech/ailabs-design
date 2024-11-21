@@ -1,5 +1,5 @@
 # Use Python official image as base
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
@@ -12,10 +12,13 @@ RUN virtualenv venv
 ENV PATH="/app/venv/bin:$PATH"
 
 # Copy requirements first to leverage Docker cache
+# Install PyTorch CPU version
+RUN pip install torch==2.1.2 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+
 COPY requirements.txt .
 
-# Install dependencies in virtual environment
-RUN pip install -r requirements.txt
+# Install other requirements
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
@@ -24,4 +27,4 @@ COPY . .
 EXPOSE 6999
 
 # Command to run the application
-CMD ["python", "app.py"]
+CMD ["python", "-u", "app.py"]
