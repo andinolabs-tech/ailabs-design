@@ -1,5 +1,5 @@
 # Use Python official image as base
-FROM python:3.10-slim
+FROM python:3.11-slim-bookworm
 
 # Set working directory
 WORKDIR /app
@@ -13,7 +13,7 @@ ENV PATH="/app/venv/bin:$PATH"
 
 # Copy requirements first to leverage Docker cache
 # Install PyTorch CPU version
-RUN pip install torch==2.1.2 -f https://download.pytorch.org/whl/cpu/torch_stable.html
+# RUN pip install torch==2.1.2 -f https://download.pytorch.org/whl/cpu/torch_stable.html
 
 COPY requirements.txt .
 
