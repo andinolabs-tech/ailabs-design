@@ -14,8 +14,7 @@
           "Gucci",
           "Tommy Hilfiger",
           "Forever 21",
-          "Other",
-          "Cannot Determine"
+          "Other"
         ]
       },
       "label": {
@@ -24,37 +23,339 @@
       },
       "inputHint": "Select applicable value from the dropdown",
       "isRequired": false,
-      "criticality": "High",
-      "group":"General Product Information"
+      "criticality": "Critical",
+      "group": "General Product Information"
     }
   },
-  "material_composition": {
+  "bullet_point": {
     "definition": {
-      "name": "material_composition",
+      "name": "bullet_point",
       "type": {
-        "name": "multi_select",
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Bullet Point",
+        "es_cl": "Punto Clave"
+      },
+      "inputHint": "Provide a detailed description in bullet points",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "Marketing and Keywords"
+    }
+  },
+  "description": {
+    "definition": {
+      "name": "description",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Description",
+        "es_cl": "Descripción"
+      },
+      "inputHint": "Enter a detailed description of the product",
+      "isRequired": false,
+      "criticality": "Critical",
+      "group": "Marketing and Keywords"
+    }
+  },
+  "item_type": {
+    "definition": {
+      "name": "item_type",
+      "type": {
+        "name": "enum",
         "allowed_values": [
-          "Cotton",
-          "Polyester",
-          "Wool",
-          "Silk",
-          "Linen",
-          "Leather",
-          "Nylon",
-          "Spandex",
-          "Elastane",
-          "Other",
-          "Cannot Determine"
+          "Shirt",
+          "Pants",
+          "Dress",
+          "Skirt",
+          "Shorts",
+          "Jacket",
+          "Sweater",
+          "Coat",
+          "Shoes",
+          "Accessories",
+          "Bag",
+          "Hat",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Material Composition",
-        "es_cl": "Composición del Material"
+        "en_us": "Item Type",
+        "es_cl": "Tipo de Artículo"
       },
-      "inputHint": "Select one or more applicable values",
+      "inputHint": "Select applicable value from the dropdown",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "General Product Information"
+    }
+  },
+  "manufacturer": {
+    "definition": {
+      "name": "manufacturer",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Nike",
+          "Adidas",
+          "Levi’s",
+          "Zara",
+          "H&M",
+          "Puma",
+          "Gucci",
+          "Tommy Hilfiger",
+          "Forever 21",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Manufacturer",
+        "es_cl": "Fabricante"
+      },
+      "inputHint": "Select applicable value from the dropdown",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "Manufacturing and Packaging"
+    }
+  },
+  "product_name": {
+    "definition": {
+      "name": "product_name",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Product Name",
+        "es_cl": "Nombre del Producto"
+      },
+      "inputHint": "Enter the name of the product",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "General Product Information"
+    }
+  },
+  "target_gender": {
+    "definition": {
+      "name": "target_gender",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Male",
+          "Female",
+          "Unisex"
+        ]
+      },
+      "label": {
+        "en_us": "Target Gender",
+        "es_cl": "Género Objetivo"
+      },
+      "inputHint": "Select the applicable gender for the product",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "General Product Information"
+    }
+  },
+  "top_style": {
+    "definition": {
+      "name": "top_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "T-shirt",
+          "Blouse",
+          "Tank Top",
+          "Sweater",
+          "Hoodie",
+          "Tunic",
+          "Crop Top",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Top Style",
+        "es_cl": "Estilo de Prenda Superior"
+      },
+      "inputHint": "Select the applicable top style for the product",
+      "isRequired": true,
+      "criticality": "Critical",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "activity_type": {
+    "definition": {
+      "name": "activity_type",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Hiking",
+          "Running",
+          "Outdoor",
+          "Indoor",
+          "Everyday Wear",
+          "Fitness Training",
+          "Travel",
+          "Casual Use",
+          "Water Sports"
+        ]
+      },
+      "label": {
+        "en_us": "Activity Type",
+        "es_cl": "Tipo de Actividad"
+      },
+      "inputHint": "Select all applicable activity types",
       "isRequired": false,
       "criticality": "High",
-      "group":"Material and Composition"
+      "group": "Usage and Target Audience"
+    }
+  },
+  "adjustability": {
+    "definition": {
+      "name": "adjustability",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Adjustable Straps",
+          "Adjustable Waist",
+          "Adjustable Fit",
+          "Stretchable",
+          "Elastic Waistband",
+          "Velcro Fastening",
+          "Adjustable Length",
+          "Customizable"
+        ]
+      },
+      "label": {
+        "en_us": "Adjustability",
+        "es_cl": "Ajustabilidad"
+      },
+      "inputHint": "Select all applicable adjustability features",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Product Features"
+    }
+  },
+  "age_range": {
+    "definition": {
+      "name": "age_range",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Infant",
+          "Toddler",
+          "Children",
+          "Teenagers",
+          "Adults",
+          "Seniors"
+        ]
+      },
+      "label": {
+        "en_us": "Age Range",
+        "es_cl": "Rango de Edad"
+      },
+      "inputHint": "Select all applicable age ranges",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "back_style": {
+    "definition": {
+      "name": "back_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Open Back",
+          "Buttoned Back",
+          "Racerback",
+          "Cross Straps",
+          "Plain Back",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Back Style",
+        "es_cl": "Estilo de Espalda"
+      },
+      "inputHint": "Select applicable value from the dropdown",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "base_color": {
+    "definition": {
+      "name": "base_color",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Black",
+          "White",
+          "Red",
+          "Navy Blue",
+          "Beige",
+          "Pastel Pink",
+          "Olive Green",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Base Color",
+        "es_cl": "Color Base"
+      },
+      "inputHint": "Select the primary color from the dropdown",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "belt_style": {
+    "definition": {
+      "name": "belt_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Wrap Belt",
+          "Buckle Belt",
+          "Drawstring Waist",
+          "Elastic Band",
+          "Obi Belt",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Belt Style",
+        "es_cl": "Estilo de Cinturón"
+      },
+      "inputHint": "Select the belt style from the dropdown",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "bottom_style": {
+    "definition": {
+      "name": "bottom_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Skirt",
+          "Shorts",
+          "Palazzo Pants",
+          "Trousers",
+          "Culottes",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Bottom Style",
+        "es_cl": "Estilo de Parte Inferior"
+      },
+      "inputHint": "Select the bottom style from the dropdown",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
     }
   },
   "care_instructions": {
@@ -74,324 +375,17 @@
           "Wash With Similar Colors",
           "Wash Separately",
           "Lay Flat to Dry",
-          "Do Not Wring",
-          "Other",
-          "Cannot Determine"
+          "Do Not Wring"
         ]
       },
       "label": {
         "en_us": "Care Instructions",
         "es_cl": "Instrucciones de Cuidado"
       },
-      "inputHint": "Select one or more applicable values",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Care and Maintenance"
-    }
-  },
-  "season": {
-    "definition": {
-      "name": "season",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Spring/Summer 2025",
-          "Fall/Winter 2025",
-          "Resort 2025",
-          "All Season",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Season",
-        "es_cl": "Temporada"
-      },
-      "inputHint": "Select one or more applicable values",
+      "inputHint": "Select all applicable care instructions",
       "isRequired": false,
       "criticality": "High",
-      "group":"Usage and Target Audience"
-    }
-  },
-  "sustainable": {
-    "definition": {
-      "name": "sustainable",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "True",
-          "False",
-          "GOTS Certified",
-          "Organic Cotton",
-          "Recycled Materials",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Sustainable",
-        "es_cl": "Sostenible"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Miscellaneous Attributes"
-    }
-  },
-  "base_color": {
-    "definition": {
-      "name": "base_color",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Black",
-          "White",
-          "Red",
-          "Navy Blue",
-          "Beige",
-          "Pastel Pink",
-          "Olive Green",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Base Color",
-        "es_cl": "Color Base"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "description": {
-    "definition": {
-      "name": "description",
-      "type": {
-        "name": "text",
-        "renderType":"multiline"
-      },
-      "label": {
-        "en_us": "Description",
-        "es_cl": "Descripción"
-      },
-      "inputHint": "Enter a detailed description of the product",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Marketing and Keywords"
-    }
-  },
-  "sleeve_length": {
-    "definition": {
-      "name": "sleeve_length",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Sleeveless", 
-          "Cap", 
-          "Short", 
-          "3/4", 
-          "Long", 
-          "Adjustable", 
-          "Other", 
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Sleeve Length",
-        "es_cl": "Largo de la Manga"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "neckline_type": {
-    "definition": {
-      "name": "neckline_type",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Crew",
-          "V-neck",
-          "Scoop",
-          "Boat",
-          "Cowl",
-          "Turtleneck",
-          "Mock",
-          "Square",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Neckline Type",
-        "es_cl": "Tipo de Escote"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "pattern": {
-    "definition": {
-      "name": "pattern",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Solid",
-          "Striped",
-          "Floral",
-          "Plaid",
-          "Check",
-          "Polka Dot",
-          "Geometric",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Pattern",
-        "es_cl": "Patrón"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "collar_type": {
-    "definition": {
-      "name": "collar_type",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Button-down",
-          "Spread",
-          "Point",
-          "Mandarin",
-          "Wing",
-          "Tab",
-          "None",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Collar Type",
-        "es_cl": "Tipo de Cuello"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "fit_type": {
-    "definition": {
-      "name": "fit_type",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Slim",
-          "Regular",
-          "Loose",
-          "Relaxed",
-          "Skinny",
-          "Fitted",
-          "Oversized",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Fit Type",
-        "es_cl": "Tipo de Ajuste"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "waist_type": {
-    "definition": {
-      "name": "waist_type",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Natural",
-          "High",
-          "Low",
-          "Elastic",
-          "Drawstring",
-          "Fitted",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Waist Type",
-        "es_cl": "Tipo de Cintura"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "rise_type": {
-    "definition": {
-      "name": "rise_type",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Low",
-          "Mid",
-          "High",
-          "Ultra High",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Rise Type",
-        "es_cl": "Tipo de Tiro"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "leg_style": {
-    "definition": {
-      "name": "leg_style",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Straight",
-          "Slim",
-          "Wide",
-          "Bootcut",
-          "Flare",
-          "Tapered",
-          "Skinny",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Leg Style",
-        "es_cl": "Estilo de Pierna"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Physical Appearance and Style"
+      "group": "Care and Maintenance"
     }
   },
   "closure_type": {
@@ -402,23 +396,72 @@
         "allowed_values": [
           "Zipper",
           "Button",
-          "Hook",
-          "Snap",
-          "Tie",
-          "Elastic",
           "Velcro",
-          "Other",
-          "Cannot Determine"
+          "Hook and Eye",
+          "Snap Closure"
         ]
       },
       "label": {
         "en_us": "Closure Type",
         "es_cl": "Tipo de Cierre"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the type of closure",
       "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "collar_type": {
+    "definition": {
+      "name": "collar_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Mandarin Collar",
+          "Spread Collar",
+          "Polo Collar",
+          "Turtle Neck",
+          "Peter Pan Collar",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Collar Type",
+        "es_cl": "Tipo de Cuello"
+      },
+      "inputHint": "Select the collar type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "department": {
+    "definition": {
+      "name": "department",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Womens Apparel",
+          "Mens Clothing",
+          "Kids Fashion",
+          "Shoes",
+          "Accessories",
+          "Sportswear",
+          "Home and Kitchen",
+          "Beauty",
+          "Electronics",
+          "Jewelry",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Department",
+        "es_cl": "Departamento"
+      },
+      "inputHint": "Select the department",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Manufacturing and Packaging"
     }
   },
   "dress_length": {
@@ -433,177 +476,45 @@
           "Maxi",
           "Floor",
           "Ankle",
-          "Other",
-          "Cannot Determine"
+          "Other"
         ]
       },
       "label": {
         "en_us": "Dress Length",
         "es_cl": "Longitud del Vestido"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the dress length",
       "isRequired": false,
       "criticality": "High",
-      "group":"Physical Appearance and Style"
+      "group": "Physical Appearance and Style"
     }
   },
-  "silhouette": {
+  "fabric_wash": {
     "definition": {
-      "name": "silhouette",
+      "name": "fabric_wash",
       "type": {
-        "name": "enum",
+        "name": "multi_select",
         "allowed_values": [
-          "A-line",
-          "Straight",
-          "Fit-and-Flare",
-          "Empire",
-          "Sheath",
-          "Ball Gown",
-          "Other",
-          "Cannot Determine"
+          "Pre-washed",
+          "Stone-washed",
+          "Soft-washed",
+          "Enzyme-washed",
+          "Acid-washed",
+          "Vintage Wash",
+          "Washed for Softness",
+          "Washed for Durability",
+          "Distressed Wash",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Silhouette",
-        "es_cl": "Silueta"
+        "en_us": "Fabric Wash",
+        "es_cl": "Lavado del Textil"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select applicable fabric wash methods",
       "isRequired": false,
       "criticality": "High",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "occasion": {
-    "definition": {
-      "name": "occasion",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Casual",
-          "Formal",
-          "Business",
-          "Party",
-          "Wedding",
-          "Beach",
-          "Athletic",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Occasion",
-        "es_cl": "Ocasión"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Usage and Target Audience"
-    }
-  },
-  "sleeve_style": {
-    "definition": {
-      "name": "sleeve_style",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Basic",
-          "Puff",
-          "Bell",
-          "Dolman",
-          "Raglan",
-          "Kimono",
-          "Batwing",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Sleeve Style",
-        "es_cl": "Estilo de Manga"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "waistline": {
-    "definition": {
-      "name": "waistline",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Natural",
-          "Empire",
-          "Drop",
-          "Elastic",
-          "Fitted",
-          "Loose",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Waistline",
-        "es_cl": "Cintura"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Physical Appearance and Style"
-    }
-  },
-  "age_range": {
-    "definition": {
-      "name": "age_range",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "0-2",
-          "2-4",
-          "4-6",
-          "6-8",
-          "8-10",
-          "10-12",
-          "12-14",
-          "14-16",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Age Range",
-        "es_cl": "Rango de Edad"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Usage and Target Audience"
-    }
-  },
-  "educational_features": {
-    "definition": {
-      "name": "educational_features",
-      "type": {
-        "name": "enum",
-        "allowed_values": [
-          "Motor Skills",
-          "Cognitive",
-          "Social",
-          "Creative",
-          "Language",
-          "Other",
-          "Cannot Determine"
-        ]
-      },
-      "label": {
-        "en_us": "Educational Features",
-        "es_cl": "Características Educativas"
-      },
-      "inputHint": "Select applicable value from the dropdown",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Miscellaneous Attributes"
+      "group": "Care and Maintenance"
     }
   },
   "fastening_type": {
@@ -612,50 +523,71 @@
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Zipper",
-          "Button",
-          "Laces",
           "Velcro",
+          "Zipper",
+          "Snap Buttons",
           "Buckle",
-          "Snap",
-          "Hook",
-          "Other",
-          "Cannot Determine"
+          "Tie Closure",
+          "Other"
         ]
       },
       "label": {
         "en_us": "Fastening Type",
         "es_cl": "Tipo de Cierre"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the fastening type",
       "isRequired": false,
-      "criticality": "Medium",
-      "group":"Miscellaneous Attributes"
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
     }
   },
-  "adjustability": {
+  "fit_type": {
     "definition": {
-      "name": "adjustability",
+      "name": "fit_type",
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Straps",
-          "Length",
-          "Width",
-          "Height",
-          "Closure",
-          "Other",
-          "Cannot Determine"
+          "Slim Fit",
+          "Regular Fit",
+          "Loose Fit",
+          "Relaxed Fit",
+          "Bodycon",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Adjustability",
-        "es_cl": "Ajustabilidad"
+        "en_us": "Fit Type",
+        "es_cl": "Tipo de Ajuste"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the fit type",
       "isRequired": false,
-      "criticality": "Medium",
-      "group":"Product Features"
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "front_pleat_type": {
+    "definition": {
+      "name": "front_pleat_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Box Pleats",
+          "Inverted Pleats",
+          "Knife Pleats",
+          "Accordion Pleats",
+          "Flat Front",
+          "Tucked Pleats",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Front Pleat Type",
+        "es_cl": "Tipo de Pliegues Frontales"
+      },
+      "inputHint": "Select the front pleat type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
     }
   },
   "hardware_type": {
@@ -664,114 +596,152 @@
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Brass",
-          "Steel",
-          "Aluminum",
-          "Gold-tone",
-          "Silver-tone",
-          "Other",
-          "Cannot Determine"
+          "Brass Zipper",
+          "Stainless Steel Buckle",
+          "Gold-Plated Hooks",
+          "Aluminum Frame",
+          "Plastic Clips",
+          "Other"
         ]
       },
       "label": {
         "en_us": "Hardware Type",
         "es_cl": "Tipo de Hardware"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the hardware type",
       "isRequired": false,
-      "criticality": "Medium",
-      "group":"Miscellaneous Attributes"
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
     }
   },
-  "activity_type": {
+  "heel_height": {
     "definition": {
-      "name": "activity_type",
+      "name": "heel_height",
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Running",
-          "Yoga",
-          "Training",
-          "Swimming",
-          "Hiking",
-          "Casual",
-          "Other",
-          "Cannot Determine"
+          "Flat (No Heel)",
+          "1 inch",
+          "2 inches",
+          "3 inches",
+          "4 inches",
+          "5 inches",
+          "High Heel (e.g., 6 inches)",
+          "Platform",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Activity Type",
-        "es_cl": "Tipo de Actividad"
+        "en_us": "Heel Height",
+        "es_cl": "Altura del Tacón"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the heel height",
       "isRequired": false,
       "criticality": "High",
-      "group":"Usage and Target Audience"
+      "group": "Fit and Measurements"
     }
   },
-  "performance_features": {
+  "leg_style": {
     "definition": {
-      "name": "performance_features",
-      "type": {
-        "name": "multi_select",
-        "allowed_values": [
-          "Moisture-wicking",
-          "Quick-dry",
-          "UV-protection",
-          "Breathable"
-        ]
-      },
-      "label": {
-        "en_us": "Performance Features",
-        "es_cl": "Características de Rendimiento"
-      },
-      "inputHint": "Select applicable values from the list",
-      "isRequired": false,
-      "criticality": "High",
-      "group":"Product Features"
-    }
-  },
-  "technical_specifications": {
-    "definition": {
-      "name": "technical_specifications",
-      "type": {
-        "name": "multi_select",
-        "allowed_values": [
-          "Water resistance rating",
-          "Breathability rating",
-          "Impact protection"
-        ]
-      },
-      "label": {
-        "en_us": "Technical Specifications",
-        "es_cl": "Especificaciones Técnicas"
-      },
-      "inputHint": "Select applicable values from the list",
-      "isRequired": false,
-      "criticality": "Medium",
-      "group":"Miscellaneous Attributes"
-    }
-  },
-  "weather_rating": {
-    "definition": {
-      "name": "weather_rating",
+      "name": "leg_style",
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Waterproof",
-          "Water Resistant",
-          "Windproof",
-          "All-weather"
+          "Straight Leg",
+          "Skinny",
+          "Flared",
+          "Bootcut",
+          "Wide Leg",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Weather Rating",
-        "es_cl": "Calificación Climática"
+        "en_us": "Leg Style",
+        "es_cl": "Estilo de Pierna"
       },
-      "inputHint": "Select applicable values from the list",
+      "inputHint": "Select the leg style",
       "isRequired": false,
-      "criticality": "Medium",
-      "group":"Miscellaneous Attributes"
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "material": {
+    "definition": {
+      "name": "material",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Cotton",
+          "Polyester",
+          "Leather",
+          "Silk",
+          "Wool",
+          "Denim",
+          "Nylon",
+          "Linen",
+          "Rayon",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Material",
+        "es_cl": "Material"
+      },
+      "inputHint": "Select the material",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Material and Composition"
+    }
+  },
+  "material_composition": {
+    "definition": {
+      "name": "material_composition",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "100% Cotton",
+          "90% Polyester, 10% Spandex",
+          "70% Wool, 30% Nylon",
+          "50% Leather, 50% Faux Leather",
+          "80% Cotton, 20% Linen",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Material Composition",
+        "es_cl": "Composición del Material"
+      },
+      "inputHint": "Select the material composition",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Material and Composition"
+    }
+  },
+  "material_type": {
+    "definition": {
+      "name": "material_type",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Natural Fiber",
+          "Synthetic Fiber",
+          "Blended Fabric",
+          "Faux Leather",
+          "Recycled Fabric",
+          "Mesh",
+          "Velvet",
+          "Stretch Fabric",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Material Type",
+        "es_cl": "Tipo de Material"
+      },
+      "inputHint": "Select the material type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Material and Composition"
     }
   },
   "metal_type": {
@@ -780,23 +750,450 @@
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Sterling Silver",
-          "14K Gold",
-          "18K Gold",
-          "Rose Gold",
+          "Gold",
+          "Silver",
           "Platinum",
-          "Other",
-          "Cannot Determine"
+          "Stainless Steel",
+          "Rose Gold",
+          "Other"
         ]
       },
       "label": {
         "en_us": "Metal Type",
         "es_cl": "Tipo de Metal"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the metal type",
       "isRequired": false,
       "criticality": "High",
-      "group":"Miscellaneous Attributes"
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "neck_style": {
+    "definition": {
+      "name": "neck_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "V-Neck",
+          "Round Neck",
+          "Square Neck",
+          "Halter Neck",
+          "Off-Shoulder",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Neck Style",
+        "es_cl": "Estilo de Cuello"
+      },
+      "inputHint": "Select the neck style",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "neckline_type": {
+    "definition": {
+      "name": "neckline_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Crew Neck",
+          "V-Neck",
+          "U-Neck",
+          "Scoop Neck",
+          "Square Neck",
+          "Turtleneck",
+          "Halter Neck",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Neckline Type",
+        "es_cl": "Tipo de Escote"
+      },
+      "inputHint": "Select the neckline type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "number_of_pockets": {
+    "definition": {
+      "name": "number_of_pockets",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5+",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Number of Pockets",
+        "es_cl": "Número de Bolsillos"
+      },
+      "inputHint": "Select the number of pockets",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "occasion": {
+    "definition": {
+      "name": "occasion",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Casual",
+          "Formal",
+          "Office Wear",
+          "Evening Wear",
+          "Wedding",
+          "Party",
+          "Beach",
+          "Travel",
+          "Sports Events",
+          "Holiday",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Occasion",
+        "es_cl": "Ocasión"
+      },
+      "inputHint": "Select the occasion",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "opacity_transparency": {
+    "definition": {
+      "name": "opacity_transparency",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Opaque",
+          "Transparent",
+          "Semi-transparent",
+          "Sheer",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Opacity / Transparency",
+        "es_cl": "Opacidad / Transparencia"
+      },
+      "inputHint": "Select the opacity or transparency",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "outer_material": {
+    "definition": {
+      "name": "outer_material",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Cotton Twill",
+          "Leather",
+          "Faux Suede",
+          "Nylon",
+          "Canvas",
+          "Wool Blend",
+          "Faux Fur",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Outer Material",
+        "es_cl": "Material Externo"
+      },
+      "inputHint": "Select the outer material",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Material and Composition"
+    }
+  },
+  "pattern": {
+    "definition": {
+      "name": "pattern",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Solid",
+          "Striped",
+          "Floral",
+          "Polka Dot",
+          "Checked",
+          "Abstract",
+          "Paisley",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Pattern",
+        "es_cl": "Patrón"
+      },
+      "inputHint": "Select the pattern",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "performance_features": {
+    "definition": {
+      "name": "performance_features",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Performance Features",
+        "es_cl": "Características de Rendimiento"
+      },
+      "inputHint": "Describe the performance features",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Product Features"
+    }
+  },
+  "pocket_description": {
+    "definition": {
+      "name": "pocket_description",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Pocket Description",
+        "es_cl": "Descripción del Bolsillo"
+      },
+      "inputHint": "Describe the pockets",
+      "isRequired": false,
+      "criticality": "Ignore",
+      "group": "Fit and Measurements"
+    }
+  },
+  "product_id": {
+    "definition": {
+      "name": "product_id",
+      "type": {
+        "name": "text",
+        "single_line": true
+      },
+      "label": {
+        "en_us": "Product ID",
+        "es_cl": "ID del Producto"
+      },
+      "inputHint": "Enter the product ID",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "General Product Information"
+    }
+  },
+  "product_type": {
+    "definition": {
+      "name": "product_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Clothing",
+          "Footwear",
+          "Accessories",
+          "Electronics",
+          "Home Goods",
+          "Beauty Products",
+          "Sports Equipment",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Product Type",
+        "es_cl": "Tipo de Producto"
+      },
+      "inputHint": "Select the product type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "General Product Information"
+    }
+  },
+  "rise_type": {
+    "definition": {
+      "name": "rise_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "High Rise",
+          "Mid Rise",
+          "Low Rise",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Rise Type",
+        "es_cl": "Tipo de Cintura"
+      },
+      "inputHint": "Select the rise type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "season": {
+    "definition": {
+      "name": "season",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Spring",
+          "Summer",
+          "Fall",
+          "Winter",
+          "All Seasons",
+          "Transitional (Spring/Fall)",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Season",
+        "es_cl": "Temporada"
+      },
+      "inputHint": "Select the relevant seasons",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "shaft_style": {
+    "definition": {
+      "name": "shaft_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Ankle Boot",
+          "Chelsea Boot",
+          "Over-the-Knee Boot",
+          "Combat Boot",
+          "Slouch Boot",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Shaft Style",
+        "es_cl": "Estilo del Empeine"
+      },
+      "inputHint": "Select the shaft style",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "shaft_style_type": {
+    "definition": {
+      "name": "shaft_style_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Ankle Shaft",
+          "Mid-Calf Shaft",
+          "Knee-High Shaft",
+          "Over-The-Knee Shaft",
+          "Slouch Shaft",
+          "Stretch Shaft",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Shaft Style Type",
+        "es_cl": "Tipo de Empeine"
+      },
+      "inputHint": "Select the shaft style type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "silhouette": {
+    "definition": {
+      "name": "silhouette",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "A-line dress",
+          "Straight-cut dress",
+          "Fitted dress",
+          "Empire-waist dress",
+          "Bell-bottom pants",
+          "Sheath dress",
+          "A-line skirt",
+          "Straight-leg pants",
+          "Waist-cinched jacket",
+          "Empire-waist top",
+          "Bell-sleeved top",
+          "Sheath skirt",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Silhouette",
+        "es_cl": "Silueta"
+      },
+      "inputHint": "Select the silhouette",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "sleeve_length": {
+    "definition": {
+      "name": "sleeve_length",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Short Sleeve",
+          "Long Sleeve",
+          "Sleeveless",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Sleeve Length",
+        "es_cl": "Longitud de Manga"
+      },
+      "inputHint": "Select the sleeve length",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "sleeve_style": {
+    "definition": {
+      "name": "sleeve_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Short Sleeve",
+          "Long Sleeve",
+          "Sleeveless",
+          "Bell Sleeve",
+          "Puff Sleeve",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Sleeve Style",
+        "es_cl": "Estilo de Manga"
+      },
+      "inputHint": "Select the sleeve style",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
     }
   },
   "stone_type": {
@@ -809,44 +1206,937 @@
           "Ruby",
           "Sapphire",
           "Emerald",
-          "Pearl",
-          "Crystal",
-          "Other",
-          "Cannot Determine"
+          "Cubic Zirconia",
+          "Other"
         ]
       },
       "label": {
         "en_us": "Stone Type",
         "es_cl": "Tipo de Piedra"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the stone type",
       "isRequired": false,
       "criticality": "High",
-      "group":"Miscellaneous Attributes"
+      "group": "Miscellaneous Attributes"
     }
   },
-  "heel_height": {
+  "style": {
     "definition": {
-      "name": "heel_height",
+      "name": "style",
       "type": {
         "name": "enum",
         "allowed_values": [
-          "Flat (0-0.5)",
-          "Low (0.5-1.5)",
-          "Mid (1.5-3)",
-          "High (3+)",
-          "Other",
-          "Cannot Determine"
+          "Casual",
+          "Formal",
+          "Party",
+          "Sportswear",
+          "Bohemian",
+          "Vintage",
+          "Streetwear",
+          "Other"
         ]
       },
       "label": {
-        "en_us": "Heel Height",
-        "es_cl": "Altura del Tacón"
+        "en_us": "Style",
+        "es_cl": "Estilo"
       },
-      "inputHint": "Select applicable value from the dropdown",
+      "inputHint": "Select the style",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "sustainable": {
+    "definition": {
+      "name": "sustainable",
+      "type": {
+        "name": "boolean",
+        "allowed_values": [
+          "Yes",
+          "No"
+        ]
+      },
+      "label": {
+        "en_us": "Sustainable",
+        "es_cl": "Sostenible"
+      },
+      "inputHint": "Indicate if sustainable",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "technical_specifications": {
+    "definition": {
+      "name": "technical_specifications",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Technical Specifications",
+        "es_cl": "Especificaciones Técnicas"
+      },
+      "inputHint": "Provide technical details",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "toe_style": {
+    "definition": {
+      "name": "toe_style",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Round Toe",
+          "Pointed Toe",
+          "Square Toe",
+          "Open Toe",
+          "Peep Toe",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Toe Style",
+        "es_cl": "Estilo de Punta"
+      },
+      "inputHint": "Select the toe style",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "underwire_type": {
+    "definition": {
+      "name": "underwire_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "With Underwire",
+          "Wire-Free",
+          "Flexible Underwire",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Underwire Type",
+        "es_cl": "Tipo de Soporte"
+      },
+      "inputHint": "Select the underwire type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "waist_type": {
+    "definition": {
+      "name": "waist_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "High Waist",
+          "Mid Waist",
+          "Low Waist",
+          "Empire Waist",
+          "Dropped Waist",
+          "Natural Waist",
+          "Asymmetrical Waist",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Waist Type",
+        "es_cl": "Tipo de Cintura"
+      },
+      "inputHint": "Select the waist type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "waistline": {
+    "definition": {
+      "name": "waistline",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "High Waist",
+          "Mid Waist",
+          "Low Waist",
+          "Empire Waist",
+          "Dropped Waist",
+          "Natural Waist",
+          "Asymmetrical Waist",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Waistline",
+        "es_cl": "Línea de Cintura"
+      },
+      "inputHint": "Select the waistline",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "weather_rating": {
+    "definition": {
+      "name": "weather_rating",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Waterproof",
+          "UV Protection",
+          "Windproof",
+          "Insulated for -10°C",
+          "All-Season Use",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Weather Rating",
+        "es_cl": "Calificación Meteorológica"
+      },
+      "inputHint": "Select the weather rating",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "arch_type": {
+    "definition": {
+      "name": "arch_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "High Arch",
+          "Medium Arch",
+          "Low Arch",
+          "Neutral Arch",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Arch Type",
+        "es_cl": "Tipo de Arco"
+      },
+      "inputHint": "Select the arch type",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Fit and Measurements"
+    }
+  },
+  "band_size": {
+    "definition": {
+      "name": "band_size",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "28",
+          "30",
+          "32",
+          "34",
+          "36",
+          "38",
+          "40",
+          "28B",
+          "32C",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Band Size",
+        "es_cl": "Tamaño de Banda"
+      },
+      "inputHint": "Select the band size",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Fit and Measurements"
+    }
+  },
+  "built_in_light": {
+    "definition": {
+      "name": "built_in_light",
+      "type": {
+        "name": "boolean",
+        "allowed_values": [
+          "Yes",
+          "No"
+        ]
+      },
+      "label": {
+        "en_us": "Built-in Light",
+        "es_cl": "Luz Integrada"
+      },
+      "inputHint": "Indicate if the product has a built-in light",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "country_region": {
+    "definition": {
+      "name": "country_region",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "United States",
+          "China",
+          "India",
+          "Germany",
+          "Italy",
+          "Vietnam",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Country/Region",
+        "es_cl": "País/Región"
+      },
+      "inputHint": "Select the country/region",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Manufacturing and Packaging"
+    }
+  },
+  "country_region_as_labeled": {
+    "definition": {
+      "name": "country_region_as_labeled",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Made in India",
+          "Designed in Italy",
+          "Manufactured in China",
+          "Assembled in USA",
+          "Made in Vietnam",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Country/Region as Labeled",
+        "es_cl": "País/Región como Etiquetado"
+      },
+      "inputHint": "Select the labeled country/region",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Manufacturing and Packaging"
+    }
+  },
+  "is_autographed": {
+    "definition": {
+      "name": "is_autographed",
+      "type": {
+        "name": "boolean",
+        "allowed_values": [
+          "Yes",
+          "No"
+        ]
+      },
+      "label": {
+        "en_us": "Is Autographed",
+        "es_cl": "Está Autografiado"
+      },
+      "inputHint": "Indicate if the product is autographed",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "item_type_keyword": {
+    "definition": {
+      "name": "item_type_keyword",
+      "type": {
+        "name": "text",
+        "multiline": true
+      },
+      "label": {
+        "en_us": "Item Type Keyword",
+        "es_cl": "Palabra Clave de Tipo de Ítem"
+      },
+      "inputHint": "Provide keywords describing the item type",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "league_name": {
+    "definition": {
+      "name": "league_name",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "NBA (National Basketball Association)",
+          "NFL (National Football League)",
+          "EPL (English Premier League)",
+          "MLB (Major League Baseball)",
+          "UEFA Champions League",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "League Name",
+        "es_cl": "Nombre de Liga"
+      },
+      "inputHint": "Select the league name",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "maximum_age_recommendation": {
+    "definition": {
+      "name": "maximum_age_recommendation",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "5 Years",
+          "10 Years",
+          "18 Years",
+          "40 Years",
+          "60 Years",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Maximum Age Recommendation",
+        "es_cl": "Recomendación de Edad Máxima"
+      },
+      "inputHint": "Select the maximum age recommendation",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "minimum_age_recommendation": {
+    "definition": {
+      "name": "minimum_age_recommendation",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "0 Months",
+          "3 Months",
+          "1 Year",
+          "5 Years",
+          "12 Years",
+          "18 Years",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Minimum Age Recommendation",
+        "es_cl": "Recomendación de Edad Mínima"
+      },
+      "inputHint": "Select the minimum age recommendation",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "opacity_unit_of_measure": {
+    "definition": {
+      "name": "opacity_unit_of_measure",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Percentage (e.g., 80% Opaque)",
+          "Denier (e.g., 30 Denier)",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Opacity Unit of Measure",
+        "es_cl": "Unidad de Medida de Opacidad"
+      },
+      "inputHint": "Select the opacity unit of measure",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "product_id_type": {
+    "definition": {
+      "name": "product_id_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "GTIN",
+          "UPC",
+          "EAN",
+          "ISBN",
+          "JAN",
+          "ASIN",
+          "MPN",
+          "SKU",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Product ID Type",
+        "es_cl": "Tipo de ID de Producto"
+      },
+      "inputHint": "Select the product ID type",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "General Product Information"
+    }
+  },
+  "product_lifecycle_supply_type": {
+    "definition": {
+      "name": "product_lifecycle_supply_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Made-to-Order",
+          "Ready-to-Ship",
+          "Pre-Order",
+          "Backorder",
+          "Drop Ship",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Product Lifecycle Supply Type",
+        "es_cl": "Tipo de Suministro del Ciclo de Vida del Producto"
+      },
+      "inputHint": "Select the product lifecycle supply type",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "style_name": {
+    "definition": {
+      "name": "style_name",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Slim Fit Formal Shirt",
+          "Maxi Evening Gown",
+          "Cropped Denim Jacket",
+          "Oversized Hoodie",
+          "Mermaid Skirt",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Style Name",
+        "es_cl": "Nombre del Estilo"
+      },
+      "inputHint": "Select the style name",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "sub_brand": {
+    "definition": {
+      "name": "sub_brand",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Sub Brand",
+        "es_cl": "Submarca"
+      },
+      "inputHint": "Enter the sub brand name",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "General Product Information"
+    }
+  },
+  "team_name": {
+    "definition": {
+      "name": "team_name",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Los Angeles Lakers",
+          "Manchester United",
+          "New York Yankees",
+          "FC Barcelona",
+          "Dallas Cowboys",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Team Name",
+        "es_cl": "Nombre del Equipo"
+      },
+      "inputHint": "Select the team name",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "theme": {
+    "definition": {
+      "name": "theme",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Summer Vibes",
+          "Wedding Wear",
+          "Retro 90s",
+          "Beachwear",
+          "Holiday Party",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Theme",
+        "es_cl": "Tema"
+      },
+      "inputHint": "Select the theme",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Physical Appearance and Style"
+    }
+  },
+  "weave_type": {
+    "definition": {
+      "name": "weave_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Plain Weave",
+          "Twill Weave",
+          "Satin Weave",
+          "Herringbone Weave",
+          "Basket Weave",
+          "Jacquard Weave",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Weave Type",
+        "es_cl": "Tipo de Tejido"
+      },
+      "inputHint": "Select the weave type",
+      "isRequired": false,
+      "criticality": "Low",
+      "group": "Material and Composition"
+    }
+  },
+  "bra_padding_level": {
+    "definition": {
+      "name": "bra_padding_level",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Light Padding",
+          "Moderate Padding",
+          "Heavy Padding",
+          "No Padding",
+          "Molded Padding",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Bra Padding Level",
+        "es_cl": "Nivel de Acolchado del Sostén"
+      },
+      "inputHint": "Select the bra padding level",
       "isRequired": false,
       "criticality": "Medium",
-      "group":"Fit and Measurements"
+      "group": "Fit and Measurements"
+    }
+  },
+  "character": {
+    "definition": {
+      "name": "character",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Character",
+        "es_cl": "Personaje"
+      },
+      "inputHint": "Enter the character name",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "collection": {
+    "definition": {
+      "name": "collection",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Collection",
+        "es_cl": "Colección"
+      },
+      "inputHint": "Enter the collection name",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Marketing and Keywords"
+    }
+  },
+  "educational_features": {
+    "definition": {
+      "name": "educational_features",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Educational Features",
+        "es_cl": "Características Educativas"
+      },
+      "inputHint": "Select the educational features",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "fur_description": {
+    "definition": {
+      "name": "fur_description",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Fur Description",
+        "es_cl": "Descripción de la Piel"
+      },
+      "inputHint": "Select the fur description",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Material and Composition"
+    }
+  },
+  "generic_keywords": {
+    "definition": {
+      "name": "generic_keywords",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Generic Keywords",
+        "es_cl": "Palabras Clave Genéricas"
+      },
+      "inputHint": "Enter generic keywords",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Marketing and Keywords"
+    }
+  },
+  "item_styling": {
+    "definition": {
+      "name": "item_styling",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Item Styling",
+        "es_cl": "Estilización del Artículo"
+      },
+      "inputHint": "Enter the item styling details",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "lining_description": {
+    "definition": {
+      "name": "lining_description",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Lining Description",
+        "es_cl": "Descripción del Forro"
+      },
+      "inputHint": "Enter the lining description",
+      "isRequired": false,
+      "criticality": "High",
+      "group": "Material and Composition"
+    }
+  },
+  "model_name": {
+    "definition": {
+      "name": "model_name",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Model Name",
+        "es_cl": "Nombre del Modelo"
+      },
+      "inputHint": "Enter the model name",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "General Product Information"
+    }
+  },
+  "seller_sku": {
+    "definition": {
+      "name": "seller_sku",
+      "type": {
+        "name": "text"
+      },
+      "label": {
+        "en_us": "Seller SKU",
+        "es_cl": "SKU del Vendedor"
+      },
+      "inputHint": "Enter the seller SKU",
+      "isRequired": false,
+      "criticality": "Ignore",
+      "group": "General Product Information"
+    }
+  },
+  "special_features": {
+    "definition": {
+      "name": "special_features",
+      "type": {
+        "name": "text",
+        "renderType": "multiline"
+      },
+      "label": {
+        "en_us": "Special Features",
+        "es_cl": "Características Especiales"
+      },
+      "inputHint": "Enter special features",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Product Features"
+    }
+  },
+  "sport_type": {
+    "definition": {
+      "name": "sport_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Running",
+          "Football",
+          "Basketball",
+          "Tennis",
+          "Yoga",
+          "Hiking",
+          "Cycling",
+          "Swimming",
+          "Gym",
+          "Golf",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Sport Type",
+        "es_cl": "Tipo de Deporte"
+      },
+      "inputHint": "Select the sport type",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "strap_type": {
+    "definition": {
+      "name": "strap_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Spaghetti Straps",
+          "Wide Straps",
+          "Halter Straps",
+          "Adjustable Straps",
+          "Crossed Straps",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Strap Type",
+        "es_cl": "Tipo de Tirantes"
+      },
+      "inputHint": "Select the strap type",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "swimwear_form_type": {
+    "definition": {
+      "name": "swimwear_form_type",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Bikini",
+          "One-Piece",
+          "Tankini",
+          "Swim Shorts",
+          "Rash Guard",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Swimwear Form Type",
+        "es_cl": "Tipo de Traje de Baño"
+      },
+      "inputHint": "Select the swimwear form type",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Miscellaneous Attributes"
+    }
+  },
+  "target_audience": {
+    "definition": {
+      "name": "target_audience",
+      "type": {
+        "name": "multi_select",
+        "allowed_values": [
+          "Adults",
+          "Teens",
+          "Kids",
+          "Seniors",
+          "Professionals",
+          "Students",
+          "Athletes",
+          "Fashion Enthusiasts",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Target Audience",
+        "es_cl": "Audiencia Objetivo"
+      },
+      "inputHint": "Select the target audience",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Usage and Target Audience"
+    }
+  },
+  "water_resistance_level": {
+    "definition": {
+      "name": "water_resistance_level",
+      "type": {
+        "name": "enum",
+        "allowed_values": [
+          "Waterproof",
+          "Water-Resistant",
+          "Water-Repellent",
+          "Splash Proof",
+          "Not Water-Resistant",
+          "Other"
+        ]
+      },
+      "label": {
+        "en_us": "Water Resistance Level",
+        "es_cl": "Nivel de Resistencia al Agua"
+      },
+      "inputHint": "Select the water resistance level",
+      "isRequired": false,
+      "criticality": "Medium",
+      "group": "Product Features"
     }
   }
 }
